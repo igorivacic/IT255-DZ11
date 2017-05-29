@@ -38,7 +38,7 @@ export class AddHotelComponent {
 err => alert(JSON.stringify(err)),
 () => {
 if(this.postResponse._body.indexOf("error") === -1){
-  alert("Dodali ste hotel");
+  alert("Uspesno ste dodali hotel ste hotel");
     this.router.parent.navigate(['./Home']);
  }else{
   alert("Greska! Niste dodali hotel");
