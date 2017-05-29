@@ -1,5 +1,5 @@
 import {Component, Directive } from 'angular2/core';
-import {Component, FormBuilder, Validators, ControlGroup, Control, FORM_DIRECTIVES, FORM_BINDINGS} from 'angular2/common'
+import {FormBuilder, Validators, ControlGroup, Control, FORM_DIRECTIVES, FORM_BINDINGS} from 'angular2/common'
 import {Http, HTTP_PROVIDERS, Headers} from 'angular2/http';
 import 'rxjs/Rx';
 import {Router, ROUTER_PROVIDERS} from 'angular2/router'
@@ -12,7 +12,7 @@ import {Router, ROUTER_PROVIDERS} from 'angular2/router'
 })
 export class AddHotelComponent {
 
-   hotelForm: ControlGroup;ponent
+   hotelForm: ControlGroup;
    http: Http;
    router: Router;
    postResponse: String;
@@ -21,7 +21,7 @@ export class AddHotelComponent {
   constructor(builder: FormBuilder, http: Http,  router: Router) {
  	this.http = http;
  	this.router = router;
-     this.hotelForm = builder.group({
+  this.hotelForm = builder.group({
       naziv: ["", Validators],
       zvezdice: ["", Validators],
       komentar: ["", Validators],
@@ -48,3 +48,4 @@ if(this.postResponse._body.indexOf("error") === -1){
 
 }
 }
+
