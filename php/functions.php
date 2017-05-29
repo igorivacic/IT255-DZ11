@@ -25,11 +25,11 @@ $rarray['rooms'] = $rooms;
 return json_encode($rarray);
 }
 
-function addRoom($roomname, $tv, $beds, $kvadratura){
+function addHotel($naziv,$zvezdice, $komentar){
 	global $conn;
 	$rarray = array();
-	$stmt = $conn->prepare("INSERT INTO rooms (roomname, tv, beds, kvadratura) VALUES (?, ?, ?, ?)");
-	$stmt->bind_param("ssss", $roomanem, $tv, $beds, $kvadratura);
+	$stmt = $conn->prepare("INSERT INTO hoteli (naziv, zvezdice, komentar) VALUES (?, ?, ?)");
+	$stmt->bind_param("sss", $naziv, $zvezdice, $komentar);
 	if($stmt->execute()){
 		$rarray['sucess'] = "ok";
 	}else{
