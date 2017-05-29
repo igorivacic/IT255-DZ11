@@ -8,7 +8,7 @@ if(isset($_POST['naziv']) && isset($_POST['zvezdice']) && isset($_POST['komentar
 
 $naziv = $_POST['naziv'];
 $zvezdice = intval($_POST['zvezdice']);
-$komentar = intval($_POST['komentar']);
+$komentar = $_POST['komentar'];
 
 
 addHotel($naziv,$zvezdice,$komentar);
